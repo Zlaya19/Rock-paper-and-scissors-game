@@ -4,6 +4,7 @@ const schäre = document.getElementById('schäre');
 const stein = document.getElementById('stein');
 const papir = document.getElementById('papir');
 const result = document.getElementById('result');
+const container = document.getElementById('container');
 
 let userChoice = '';
 let computerChoice = '';
@@ -240,6 +241,8 @@ const button = document.getElementById('btn_user');
         compPoints.style.background = '#ff4d4d';
         img.src = 'bilder/smile.png';
         compTurn.style.backgroundImage = 'bilder/smile.png';
+        container.style.background = '#90ee90';
+        container.style.transition = '0.5s';
       }
       else if(compScore = 3){
         userPoints.style.background = '#ff4d4d';
@@ -247,6 +250,8 @@ const button = document.getElementById('btn_user');
         compPoints.style.transform = 'scale(1.2)';
         img.src = 'bilder/sad.png';
         compTurn.style.backgroundImage = 'bilder/sad.png';
+        container.style.background = '#FF7F7F';
+        container.style.transition = '0.5s';
       }
       userTurn.remove();
     }
@@ -254,26 +259,26 @@ const button = document.getElementById('btn_user');
 
     // events for a better design
 
-    schäre.addEventListener('pointerdown', function(){
+ /*    schäre.addEventListener('pointerdown', function(){
       schäre.style.background = '#54d6b1';
-    })
-    schäre.addEventListener('mouseleave', function(){
+    }) */
+    /* schäre.addEventListener('mouseleave', function(){
       schäre.style.background = '#54d5d1';
-    })
+    }) */
 
-    stein.addEventListener('pointerdown', function(){
+/*     stein.addEventListener('pointerdown', function(){
       stein.style.background = '#54d6b1';
-    })
-    stein.addEventListener('mouseleave', function(){
+    }) */
+    /* stein.addEventListener('mouseleave', function(){
       stein.style.background = '#54d5d1';
-    })
-
+    }) */
+/* 
     papir.addEventListener('pointerdown', function(){
       papir.style.background = '#54d6b1';
-    })
-    papir.addEventListener('mouseleave', function(){
+    }) */
+    /* papir.addEventListener('mouseleave', function(){
       papir.style.background = '#54d5d1';
-    })
+    }) */
 
     schäre.addEventListener('mouseenter', function(){
       schäre.style.transform = 'scale(1.1)';

@@ -1,20 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@font-face {
+    font-family: 'lane';
+    src: url('./font/LANENAR_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'handlee';
+    src: url('./font/handlee-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'handlee';
 }
 
 #container {
     width: 100%;
-    height: 100vh;
-    background: #54d5d1;
+    height: 757px;
+    background: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    grid-gap: 25px;
+    gap: 25px;
+    box-shadow: inset 0 0 8px #999,inset 0 0 8px #999;
 }
 img{
     max-width: 75%;
@@ -22,89 +36,91 @@ img{
     display: block;
 }
 #user-div {
-    border: 2px solid black;
-    border-radius: 60px;
-    background: grey;
-    width: 40%;
+    background: #ddd;
+    width: 650px;
     height: 37%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;   
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75), 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    align-items: center;
+    /* border: 4px solid #eee;
+    border-radius: 6px 6px 84px 84px; */
+    box-shadow: 0 0 4px #999, 0 0 8px #888;
 }
 #result {
     width: 100%;
-    height: 10vh;
+    height: 85px;
     font-size: 32px;
-    text-shadow: 0 0 3px red, 0 0 1px red;
+    text-shadow: 0 0 3px #666, 0 0 1px #666;
     transition: 1s;
-    background: grey;
+    color: #333;
+    /* border: 4px solid #eee; */
+    background: #fff;
     display: flex;
+    padding: 10px 0 0 0;
     justify-content: center;
     align-items: center;
-    font-family: 'Sansita Swashed', cursive;
-    box-shadow: 
-    inset 0px 11px 16px -10px rgba(0, 0, 0, 0.99),
-    inset 0px -11px 4px -10px rgba(0, 0, 0, 0.99); 
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px #777, inset 0 0 3px #999; 
 }
 #computer-div {
-    border: 2px solid black;
-    border-radius: 100px;
-    background: grey;
-    width: 312px;
-    height: 280px;
+    width: 300px;
+    height: 270px;
+    background: #fff;
     display: flex;
-    flex-wrap: wrap;
+    /* border: 1px solid #999; */
     justify-content: space-evenly;
-    align-items: center;   
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75), 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+    align-items: center;
+    /* border: 4px solid #eee;
+    border-radius:  84px 84px 6px 6px;
+    box-shadow: 0 0 4px #999, 0 0 8px #888; */
+    box-shadow: 0 0 4px #999, 0 0 8px #888;
 }
 #schäre {
     width: 150px;
     height: 150px;
-    border: 2px solid black;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #54d5d1;
+    background: #eecc66;
     font-size: 42px;
     color:gold;
-    font-family: 'Sansita Swashed', cursive;
-    text-shadow: 0 0 3px black, 0 0 3px black;
-    box-shadow: 0 0 5px 2px black, 0 0 5px 2px;
+    text-shadow: 0 0 3px #666, 0 0 3px #666;
+    border: 2px solid #666;
+    box-shadow: 0 0 5px 2px #666, 0 0 5px 2px #666;
     cursor: pointer;
 }
 #stein {
     width: 150px;
     height: 150px;
-    border: 2px solid black;
+    border: 2px solid #666;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #54d5d1;
+    background: #eecc66;
     font-size: 42px;
     color:gold;
-    font-family: 'Sansita Swashed', cursive;
-    text-shadow: 0 0 3px black, 0 0 3px black;
-    box-shadow: 0 0 5px 2px black, 0 0 5px 2px;
+    text-shadow: 0 0 3px #666, 0 0 3px #666;
+    box-shadow: 0 0 5px 2px #666, 0 0 5px 2px #666;
     cursor: pointer;
 }
 #papir {
     width: 150px;
     height: 150px;
-    border: 2px solid black;
+    border: 2px solid #666;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #54d5d1;
+    background: #eecc66;
     font-size: 42px;
     color:gold;
-    font-family: 'Sansita Swashed', cursive;
-    text-shadow: 0 0 3px black, 0 0 3px black;
-    box-shadow: 0 0 5px 2px black, 0 0 5px 2px black;
+    text-shadow: 0 0 3px #666, 0 0 3px #666;
+    box-shadow: 0 0 5px 2px #666, 0 0 5px 2px #666;
     cursor: pointer;
 }
 
@@ -113,69 +129,63 @@ img{
     position: absolute;
     width: 150px;
     height: 150px;
-    border: 2px solid black;
+    border: 2px solid #666;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #54d5d1;
+    background: #eecc66;
     color:gold;
-    font-family: 'Sansita Swashed', cursive;
     text-shadow: 0 0 3px black, 0 0 3px black;
-    box-shadow: 0 0 5px 2px black, 0 0 5px 2px;
+    box-shadow: 0 0 5px 1px #888, 0 0 5px 1px #888;
 }
 .class_h3 {
     font-size: 42px;
-    font-family: 'Sansita Swashed', cursive;
     text-shadow: 0 0 3px black, 0 0 3px black;
 }
 #bottom-container {
+    background: #ddd;
+    width: 1100px;
+    height: 38%;
     display: flex;
     justify-content: space-evenly;
-    align-items:center;
-    background: #737373;
-    width: 90%;
-    height: 38%;
-    border: none;
-    border: 2px solid black;
-    border-bottom-left-radius: 170px;
-    border-bottom-right-radius: 170px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75), 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    align-items: center;
+    /* border: 4px solid #eee;
+    box-shadow: 0 0 4px #999, inset 0 0 10px #888; */
+    box-shadow: 0 0 4px #999, 0 0 8px #888;
     overflow: hidden;
+    border-radius: 0 0 120px 120px;
 }
 #compPoints {
-    border: 2px solid black;
     border-radius: 100px;
-    background: grey;
+    background: #eecc66;
     width: 206px;
     height: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: baseline;   
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75), 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    border: 2px solid #666;
+    box-shadow: 0 0 5px 2px #666, 0 0 5px 2px #666;
 }
 #userPoints {
-    border: 2px solid black;
     border-radius: 100px;
-    background: grey;
+    background: #eecc66;
     width: 206px;
     height: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: baseline;    
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75), 0 0 5px 2px rgba(0, 0, 0, 0.75);
+    border: 2px solid #666;
+    box-shadow: 0 0 5px 2px #666, 0 0 5px 2px #666;
 }
 .score {
-    font-family: 'Sansita Swashed', cursive;
     font-size: 150px;
-    text-shadow: 2px 10px 5px rgb(68, 68, 68), 2px 10px 10px rgb(255, 62, 62);
+    text-shadow: 2px 6px 5px rgb(68, 68, 68), 2px 10px 10px #eecc66;
 }
 span {
-    font-size: 190px;
-    margin-bottom: 115px;
+    font-size: 160px;
+    /* margin-bottom: 60px; */
     overflow: visible;
 }
