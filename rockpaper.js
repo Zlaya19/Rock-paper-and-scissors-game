@@ -5,6 +5,7 @@ const stein = document.getElementById('stein');
 const papir = document.getElementById('papir');
 const result = document.getElementById('result');
 const container = document.getElementById('container');
+const bottomContainer = document.getElementById('bottom-container');
 
 let userChoice = '';
 let computerChoice = '';
@@ -29,16 +30,16 @@ const button = document.getElementById('btn_user');
       computerChoice = schäreSteinPapir();
 
       if(userChoice == computerChoice){
-        result.innerHTML = '<h1>' + 'Nerijeseno, igraj ponovo!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Draw, play again!' + '</h1>';
       }
       else if (computerChoice == 'stein' && userChoice == 'schäre'){
-        result.innerHTML = '<h1>' + 'Kompjuter je pobijedio!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Comp won!' + '</h1>';
         compPoints.classList.add('score');
         compScore ++;
         compPoints.innerHTML = compScore;
       }
       else if (computerChoice == 'papir' && userChoice == 'schäre'){
-        result.innerHTML = '<h1>' + 'Pobijedio si!  Kompjuter je imao papir.' + '</h1>';
+        result.innerHTML = '<h1>' + 'You win, comp had paper' + '</h1>';
         userPoints.classList.add('score');
         userScore ++;
         userPoints.innerHTML = userScore;
@@ -76,25 +77,28 @@ const button = document.getElementById('btn_user');
     })
 
     if(userScore == 3 || compScore == 3){
-      result.innerHTML = '<span>' + 'Igra je zavrsena!' + '</span>';
+      result.innerHTML = '<span>' + 'Game is over!' + '</span>';
       if(userScore == 3){
-        userPoints.style.background = '#4dffa6';
-        userPoints.style.transform = 'scale(1.2)';
-        compPoints.style.background = '#ff4d4d';
         img.src = 'bilder/smile.png';
         compTurn.style.backgroundImage = 'bilder/smile.png';
+        container.style.background = '#90ee90';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#90ee90';
+        bottomContainer.style.transition = '1s'
       }
       else if(compScore = 3){
-        userPoints.style.background = '#ff4d4d';
-        compPoints.style.background = '#4dffa6';
-        compPoints.style.transform = 'scale(1.2)';
         img.src = 'bilder/sad.png';
         compTurn.style.backgroundImage = 'bilder/sad.png';
+        container.style.background = '#FF7F7F';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#FF7F7F';
+        bottomContainer.style.transition = '1s'
       }
       userTurn.remove();
     }
+  });
     
-    });
+  
 
   papir.addEventListener('click', function(){
 
@@ -108,16 +112,16 @@ const button = document.getElementById('btn_user');
     computerChoice = schäreSteinPapir();
 
       if(userChoice == computerChoice){
-        result.innerHTML = '<h1>' + 'Nerijeseno, igraj ponovo!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Draw, play again!' + '</h1>';
       }
       else if (computerChoice == 'stein' && userChoice == 'papir'){
-        result.innerHTML = '<h1>' + 'Pobijedio si!  Kompjuter je imao kamen.' + '</h1>';
+        result.innerHTML = '<h1>' + 'you win! Comp had rock' + '</h1>';
         userPoints.classList.add('score');
         userScore ++;
         userPoints.innerHTML = userScore;
       }
       else if(computerChoice == 'schäre' && userChoice == 'papir'){
-        result.innerHTML = '<h1>' + 'Kompjuter je pobijedio!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Comp win!' + '</h1>';
         compPoints.classList.add('score');
         compScore ++;
         compPoints.innerHTML = compScore;
@@ -155,25 +159,28 @@ const button = document.getElementById('btn_user');
     });
 
     if(userScore == 3 || compScore == 3){
-      result.innerHTML = '<span>' + 'Igra je zavrsena!' + '</span>';
+      result.innerHTML = '<span>' + 'Game is over!' + '</span>';
       if(userScore == 3){
-        userPoints.style.background = '#4dffa6';
-        userPoints.style.transform = 'scale(1.2)';
-        compPoints.style.background = '#ff4d4d';
         img.src = 'bilder/smile.png';
         compTurn.style.backgroundImage = 'bilder/smile.png';
+        container.style.background = '#90ee90';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#90ee90';
+        bottomContainer.style.transition = '1s'
       }
       else if(compScore = 3){
-        userPoints.style.background = '#ff4d4d';
-        compPoints.style.background = '#4dffa6';
-        compPoints.style.transform = 'scale(1.2)';
         img.src = 'bilder/sad.png';
         compTurn.style.backgroundImage = 'bilder/sad.png';
+        container.style.background = '#FF7F7F';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#FF7F7F';
+        bottomContainer.style.transition = '1s'
       }
       userTurn.remove();
     }
-    
   });
+    
+  
         
     stein.addEventListener('click', function(){
 
@@ -186,16 +193,16 @@ const button = document.getElementById('btn_user');
     computerChoice = schäreSteinPapir(); 
 
       if(userChoice == computerChoice){
-          result.innerHTML = '<h1>' + 'Nerijeseno, igraj ponovo!' + '</h1>';
+          result.innerHTML = '<h1>' + 'Draw, play again!' + '</h1>';
       }
       else if (computerChoice == 'papir' && userChoice == 'stein'){
-        result.innerHTML = '<h1>' + 'Kompjuter je pobijedio!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Comp win!' + '</h1>';
         compPoints.classList.add('score');
         compScore ++;
         compPoints.innerHTML = compScore;
       }
       else if (computerChoice == 'schäre' && userChoice == 'stein'){
-        result.innerHTML = '<h1>' + 'Pobijedio si!  Kompjuter je imao makaze.' + '</h1>';
+        result.innerHTML = '<h1>' + 'You win, Comp had scissors' + '</h1>';
         userPoints.classList.add('score');
         userScore ++;
         userPoints.innerHTML = userScore;
@@ -234,24 +241,22 @@ const button = document.getElementById('btn_user');
     });
 
     if(userScore == 3 || compScore == 3){
-      result.innerHTML = '<span>' + 'Igra je zavrsena!' + '</span>';
+      result.innerHTML = '<span>' + 'Game is over!' + '</span>';
       if(userScore == 3){
-        userPoints.style.background = '#4dffa6';
-        userPoints.style.transform = 'scale(1.2)';
-        compPoints.style.background = '#ff4d4d';
         img.src = 'bilder/smile.png';
         compTurn.style.backgroundImage = 'bilder/smile.png';
         container.style.background = '#90ee90';
-        container.style.transition = '0.5s';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#90ee90';
+        bottomContainer.style.transition = '1s'
       }
       else if(compScore = 3){
-        userPoints.style.background = '#ff4d4d';
-        compPoints.style.background = '#4dffa6';
-        compPoints.style.transform = 'scale(1.2)';
         img.src = 'bilder/sad.png';
         compTurn.style.backgroundImage = 'bilder/sad.png';
         container.style.background = '#FF7F7F';
-        container.style.transition = '0.5s';
+        container.style.transition = '3s';
+        bottomContainer.style.background = '#FF7F7F';
+        bottomContainer.style.transition = '1s'
       }
       userTurn.remove();
     }
@@ -259,26 +264,6 @@ const button = document.getElementById('btn_user');
 
     // events for a better design
 
- /*    schäre.addEventListener('pointerdown', function(){
-      schäre.style.background = '#54d6b1';
-    }) */
-    /* schäre.addEventListener('mouseleave', function(){
-      schäre.style.background = '#54d5d1';
-    }) */
-
-/*     stein.addEventListener('pointerdown', function(){
-      stein.style.background = '#54d6b1';
-    }) */
-    /* stein.addEventListener('mouseleave', function(){
-      stein.style.background = '#54d5d1';
-    }) */
-/* 
-    papir.addEventListener('pointerdown', function(){
-      papir.style.background = '#54d6b1';
-    }) */
-    /* papir.addEventListener('mouseleave', function(){
-      papir.style.background = '#54d5d1';
-    }) */
 
     schäre.addEventListener('mouseenter', function(){
       schäre.style.transform = 'scale(1.1)';

@@ -17,6 +17,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'handlee';
+    user-select: none;
 }
 
 #container {
@@ -130,7 +131,7 @@ img{
     position: absolute;
     width: 150px;
     height: 150px;
-    border: 2px solid #666;
+    /* border: 2px solid #666; */
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -188,5 +189,158 @@ img{
 span {
     font-size: 160px;
     /* margin-bottom: 60px; */
+    margin-top: 15px;
     overflow: visible;
 }
+
+/* responsive design */
+
+@media screen and (max-width: 1250px) {
+    span {
+        font-size: 130px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #bottom-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    span {
+        font-size: 100px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #user-div {
+        width: 90%;
+    }
+
+    #computer-div {
+        width: 175px;
+        height: 175px;
+    }
+
+    #userPoints, #compPoints {
+        width: 25%;
+        height: 55%;
+    }
+
+    .score {
+        font-size: 120px;
+    }
+
+    span {
+        font-size: 80px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #schäre, #stein, #papir {
+        width: 25%;
+    }
+
+    span {
+        font-size: 60px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #user-div, #bottom-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #schäre, #stein, #papir {
+        width: 27%;
+    }
+
+    #userPoints, #compPoints {
+        width: 25%;
+        height: 45%;
+    }
+
+    .score {
+        font-size: 100px;
+    }
+
+    span {
+        font-size: 50px;
+    }
+
+    #result {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+        
+    #computer-div {
+        width: 145px;
+        height: 145px;
+    }
+ 
+    .class_div {
+        width: 125px;
+        height: 125px;
+    }
+
+    #userPoints, #compPoints {
+        width: 25%;
+        height: 40%;
+    }
+
+    .score {
+        font-size: 90px;
+    }
+
+    #result {
+        font-size: 11.5px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    #computer-div {
+        width: 125px;
+        height: 125px;
+    }
+ 
+    .class_div {
+        width: 105px;
+        height: 105px;
+    }
+
+    #userPoints, #compPoints {
+        width: 25%;
+        height: 35%;
+    }
+
+    .score {
+        font-size: 80px;
+    }
+
+    span {
+        font-size: 43px;
+    }
+
+    #result {
+        font-size: 10px;
+    }
+}
+
