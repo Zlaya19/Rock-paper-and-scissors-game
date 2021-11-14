@@ -33,7 +33,7 @@ const button = document.getElementById('btn_user');
         result.innerHTML = '<h1>' + 'Draw, play again!' + '</h1>';
       }
       else if (computerChoice == 'stein' && userChoice == 'schäre'){
-        result.innerHTML = '<h1>' + 'Comp won!' + '</h1>';
+        result.innerHTML = '<h1>' + 'Comp win!' + '</h1>';
         compPoints.classList.add('score');
         compScore ++;
         compPoints.innerHTML = compScore;
